@@ -1,0 +1,312 @@
+{
+	"info": {
+		"_postman_id": "5944cb1b-1c38-4ddc-98ce-fc59fb856b8f",
+		"name": "yliang09_postman_collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13838094"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/api/auth/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"keainie\",\r\n    \"password\": \"babata\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/auth/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"keainie\",\r\n    \"password\": \"babata\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/auth/logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImtlYWluaWUiLCJfaWQiOiI2NGY5NjlhZDY5NWRkODY4Y2YzYmEzYzQiLCJpYXQiOjE2OTQwNjcxOTYsImV4cCI6MTY5NDA5NTk5Nn0.bPktvVrG3dCRnZp423heQEzRJT-oTFG1pBd2FaodBuIK-rMuh7bt0XA6VKOs7ZeyCSpNHzKGVQ1V0NHDUr1HJbygAUn0kyf8-0Wul7GBKjTnPFyk8sWnS4b-Ab2cu0k2IwVQdjY_IqEQswJg8gR7zfJp6oHMolBs9eQ1QruP2ovfiErovkW4xSWkBqK2q_DLkMAKkqdq3U8iGiuK9C2YdSHsMPxtKScv04FInQ2pWJ1qa6CgmNW1puHq9ioiBdCSXLPUosSDgb2ia58tIUJv2tS4aUi_5AH8FK-J6GNHiOtiorB-FaB9jKzGzh7HJvH70Xakoe8ru5Wop4YQrZKwdA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/auth/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/game/getGames",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImtlYWluaWUiLCJfaWQiOiI2NGY5NjlhZDY5NWRkODY4Y2YzYmEzYzQiLCJpYXQiOjE2OTQwNjcxOTYsImV4cCI6MTY5NDA5NTk5Nn0.bPktvVrG3dCRnZp423heQEzRJT-oTFG1pBd2FaodBuIK-rMuh7bt0XA6VKOs7ZeyCSpNHzKGVQ1V0NHDUr1HJbygAUn0kyf8-0Wul7GBKjTnPFyk8sWnS4b-Ab2cu0k2IwVQdjY_IqEQswJg8gR7zfJp6oHMolBs9eQ1QruP2ovfiErovkW4xSWkBqK2q_DLkMAKkqdq3U8iGiuK9C2YdSHsMPxtKScv04FInQ2pWJ1qa6CgmNW1puHq9ioiBdCSXLPUosSDgb2ia58tIUJv2tS4aUi_5AH8FK-J6GNHiOtiorB-FaB9jKzGzh7HJvH70Xakoe8ru5Wop4YQrZKwdA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/game/getGames",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"game",
+						"getGames"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/game/createGame",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImtlYWluaWUiLCJfaWQiOiI2NGY5NjlhZDY5NWRkODY4Y2YzYmEzYzQiLCJpYXQiOjE2OTQwNjcxOTYsImV4cCI6MTY5NDA5NTk5Nn0.bPktvVrG3dCRnZp423heQEzRJT-oTFG1pBd2FaodBuIK-rMuh7bt0XA6VKOs7ZeyCSpNHzKGVQ1V0NHDUr1HJbygAUn0kyf8-0Wul7GBKjTnPFyk8sWnS4b-Ab2cu0k2IwVQdjY_IqEQswJg8gR7zfJp6oHMolBs9eQ1QruP2ovfiErovkW4xSWkBqK2q_DLkMAKkqdq3U8iGiuK9C2YdSHsMPxtKScv04FInQ2pWJ1qa6CgmNW1puHq9ioiBdCSXLPUosSDgb2ia58tIUJv2tS4aUi_5AH8FK-J6GNHiOtiorB-FaB9jKzGzh7HJvH70Xakoe8ru5Wop4YQrZKwdA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"size\": 5}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/game/createGame",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"game",
+						"createGame"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/game/saveGameHistory",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImtlYWluaWUiLCJfaWQiOiI2NGY5NjlhZDY5NWRkODY4Y2YzYmEzYzQiLCJpYXQiOjE2OTQwNjcxOTYsImV4cCI6MTY5NDA5NTk5Nn0.bPktvVrG3dCRnZp423heQEzRJT-oTFG1pBd2FaodBuIK-rMuh7bt0XA6VKOs7ZeyCSpNHzKGVQ1V0NHDUr1HJbygAUn0kyf8-0Wul7GBKjTnPFyk8sWnS4b-Ab2cu0k2IwVQdjY_IqEQswJg8gR7zfJp6oHMolBs9eQ1QruP2ovfiErovkW4xSWkBqK2q_DLkMAKkqdq3U8iGiuK9C2YdSHsMPxtKScv04FInQ2pWJ1qa6CgmNW1puHq9ioiBdCSXLPUosSDgb2ia58tIUJv2tS4aUi_5AH8FK-J6GNHiOtiorB-FaB9jKzGzh7HJvH70Xakoe8ru5Wop4YQrZKwdA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/game/saveGameHistory",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"game",
+						"saveGameHistory"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/game/exitGame",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImtlYWluaWUiLCJfaWQiOiI2NGY5NjlhZDY5NWRkODY4Y2YzYmEzYzQiLCJpYXQiOjE2OTQwNjcxOTYsImV4cCI6MTY5NDA5NTk5Nn0.bPktvVrG3dCRnZp423heQEzRJT-oTFG1pBd2FaodBuIK-rMuh7bt0XA6VKOs7ZeyCSpNHzKGVQ1V0NHDUr1HJbygAUn0kyf8-0Wul7GBKjTnPFyk8sWnS4b-Ab2cu0k2IwVQdjY_IqEQswJg8gR7zfJp6oHMolBs9eQ1QruP2ovfiErovkW4xSWkBqK2q_DLkMAKkqdq3U8iGiuK9C2YdSHsMPxtKScv04FInQ2pWJ1qa6CgmNW1puHq9ioiBdCSXLPUosSDgb2ia58tIUJv2tS4aUi_5AH8FK-J6GNHiOtiorB-FaB9jKzGzh7HJvH70Xakoe8ru5Wop4YQrZKwdA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/game/exitGame",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"game",
+						"exitGame"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/game/getActiveGame",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImtlYWluaWUiLCJfaWQiOiI2NGY5NjlhZDY5NWRkODY4Y2YzYmEzYzQiLCJpYXQiOjE2OTQwNjcxOTYsImV4cCI6MTY5NDA5NTk5Nn0.bPktvVrG3dCRnZp423heQEzRJT-oTFG1pBd2FaodBuIK-rMuh7bt0XA6VKOs7ZeyCSpNHzKGVQ1V0NHDUr1HJbygAUn0kyf8-0Wul7GBKjTnPFyk8sWnS4b-Ab2cu0k2IwVQdjY_IqEQswJg8gR7zfJp6oHMolBs9eQ1QruP2ovfiErovkW4xSWkBqK2q_DLkMAKkqdq3U8iGiuK9C2YdSHsMPxtKScv04FInQ2pWJ1qa6CgmNW1puHq9ioiBdCSXLPUosSDgb2ia58tIUJv2tS4aUi_5AH8FK-J6GNHiOtiorB-FaB9jKzGzh7HJvH70Xakoe8ru5Wop4YQrZKwdA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/game/getActiveGame",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"game",
+						"getActiveGame"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/game/updateGame",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImtlYWluaWUiLCJfaWQiOiI2NGY5NjlhZDY5NWRkODY4Y2YzYmEzYzQiLCJpYXQiOjE2OTQwNjcxOTYsImV4cCI6MTY5NDA5NTk5Nn0.bPktvVrG3dCRnZp423heQEzRJT-oTFG1pBd2FaodBuIK-rMuh7bt0XA6VKOs7ZeyCSpNHzKGVQ1V0NHDUr1HJbygAUn0kyf8-0Wul7GBKjTnPFyk8sWnS4b-Ab2cu0k2IwVQdjY_IqEQswJg8gR7zfJp6oHMolBs9eQ1QruP2ovfiErovkW4xSWkBqK2q_DLkMAKkqdq3U8iGiuK9C2YdSHsMPxtKScv04FInQ2pWJ1qa6CgmNW1puHq9ioiBdCSXLPUosSDgb2ia58tIUJv2tS4aUi_5AH8FK-J6GNHiOtiorB-FaB9jKzGzh7HJvH70Xakoe8ru5Wop4YQrZKwdA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"row\": 1,\r\n    \"col\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/game/updateGame",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"game",
+						"updateGame"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

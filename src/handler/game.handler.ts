@@ -80,7 +80,7 @@ gameHandler.post(
 
       exitGame(decodedToken._id);
 
-      return res.status(200)
+      return res.status(200).send("save ok")
 
     } catch (err) {
       return res.status(500).send(err)
@@ -136,7 +136,7 @@ gameHandler.post(
 
       exitGame(decodedToken._id);
 
-      return res.status(200);
+      return res.status(200).send("exit ok");
 
     } catch (err) {
       return res.status(500).send(err)
@@ -163,7 +163,7 @@ gameHandler.post(
           {game : game});
       }
 
-      return res.status(200)
+      return res.status(200).send("unknown error")
 
     } catch (err) {
       return res.status(500).send(err)

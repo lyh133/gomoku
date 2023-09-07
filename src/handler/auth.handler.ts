@@ -102,7 +102,7 @@ authHandler.post(
       if(!user) return res.status(401).send('Unauthorized');
 
       logged_user.delete(decodedToken._id);
-      return res.status(200)
+      return res.status(200).send("logout ok")
       
     } catch (err) {
       return res.status(500).send(err);
