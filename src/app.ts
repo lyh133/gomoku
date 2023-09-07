@@ -12,9 +12,6 @@ app.use(
   )
 app.use(express.json())
 
-// app.use('/api/theatres', theatreHandler)
-// app.use('/api/movies', movieHandler)
-// app.use('/api/bookings', bookingHandler)
 app.use('/api/game', gameHandler)
 app.use('/api/auth', authHandler)
 

@@ -8,3 +8,7 @@ export async function getGamesById(user_id: string) {
 export async function getGameById(id: string) {
     return GameModel.findOne({ _id: new mongoose.Types.ObjectId(id) }).lean()
 }
+
+export async function saveGameHistory(game: DocumentDefinition<GameDocument>) {
+  return GameModel.create(game)
+}

@@ -1,10 +1,14 @@
 import { game, move, playerType } from './model/game.model'
 
 
-const activeGames: Array<game> = [];
+var activeGames: Array<game> = [];
 
 
+export const getGamebyUID = (uid:string): game | undefined => {
+  return activeGames.find( game => game.uid === uid);
+}
 
+//create active game, if game already exist then return it
 export const createNewGame = (uid:string, size:number): game | undefined => {
 
     let newGame: game | undefined;
@@ -23,19 +27,26 @@ export const createNewGame = (uid:string, size:number): game | undefined => {
       board.push(row);
     }
 
+    const moves: Array<move> = [];
     newGame = {
         uid: uid,
         size: size,
         board: board,
         result: null,
         isFinished: false,
+        moves: moves,
         turn: "black"
     }
     activeGames.push(newGame)
     return newGame
 }
 
+//remove active game
+export const exitGame = (uid:string) => {  
+  activeGames = activeGames.filter( game => game.uid !== uid);
+}
 
+// handle game update logic
 export const makeMove = (uid:string, row:number, col:number): game | undefined | null=> {
   
   let game: game | undefined;
@@ -47,7 +58,12 @@ export const makeMove = (uid:string, row:number, col:number): game | undefined |
   if(game.board[row][col] != null) return null;
 
   game.board[row][col] = game.turn;
-  
+  game.moves.push({
+    rowIndex: row,
+    colIndex: col,
+    player : game.turn,
+    moveNum: game.moves.length+1
+})
 
   if(checkWinningState(game.board, game.size)) {
     game.result = game.turn;
